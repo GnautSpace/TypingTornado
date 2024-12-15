@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background:rgb(255, 250, 227);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#start-screen, #game-screen, #end-screen {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  background: #fffee3;
+  padding: 20px;
+  border: 5px dashed #ff9e9e;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #ff6f6f;
+  position: relative;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #ff6f6f;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #ff9e9e;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #ff6f6f;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  animation: typing 2s steps(15, end), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(161, 111, 255);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color:rgb(173, 111, 255);
+  }
+}
+
+.btn {
+  font-size: 1.2rem;
+  background:rgb(161, 111, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 0px rgb(192, 158, 255);
+}
+
+.funky-btn {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(45deg, #fbc7d4, #9796f0);
+  color: #fff;
+  text-shadow: 1px 1px #ff9e9e;
+  border: 3px dashed #fff;
+}
+
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.word-box {
+  background: #fff1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px rgb(255, 111, 111);
+  margin-bottom: 10px;
+}
+
+.word-box p {
+  font-size: 1.5rem;
+  color:rgb(255, 111, 111);
+}
+
+#user-input {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #ff9e9e;
+  border-radius: 5px;
+  outline: none;
+  justify-self: center;
+  box-shadow: 2px 2px 0px #ff6f6f;
+}
+.game-over {
+  font-size: 2rem;
+  color: #ff6f6f;
+}
+#final-score {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.power-up {
+  font-size: 1.8rem;
+  color: #ff0080;
+  font-weight: bold;
+  text-shadow: 2px 2px #ffe600;
+}
+
+.power-up-glow {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffe600, 0 0 20px #ff0080, 0 0 30px #ff0080;
+  }
+  to {
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff0080, 0 0 40px #ff0080;
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffe600, #ff0080);
+  border-radius: 50%;
+  animation: fall 1s ease-out forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: 0;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: calc(50% + 50px);
+    opacity: 0;
+  }
+}

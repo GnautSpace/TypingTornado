@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <title>Typing Tornado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="start-screen">
+      <h1 class="game-title">Typing Tornado 🌪️</h1>
+      <div class="player-info">
+        <div class="avatar">
+          <img src="icon.png" alt="Avatar">
+        </div>
+        <div class="welcome-message">
+          <p>Welcome, <span id="player-name">Player</span>!</p>
+        </div>
+      </div>
+      <button id="start-btn" class="btn funky-btn">Start the Typing Madness!</button>
+    </div>
+  
+    <div id="game-screen" style="display: none;">
+      <div class="info-bar">
+        <p id="timer" class="timer">Time: 30s</p>
+        <p id="score" class="score">Score: 0</p>
+      </div>
+      <div class="word-box">
+        <p id="word-display">Press Start to Play!</p>
+      </div>
+      <input id="user-input" type="text" placeholder="Type here..." autocomplete="off">
+    </div>
+  
+    <div id="end-screen" style="display: none;">
+      <h1 class="game-over">Game Over!</h1>
+      <p id="final-score"></p>
+      <button id="new-game-btn" class="btn funky-btn">New Game</button>
+    </div>
+  
+    <script type="application/javascript" src="script.js"></script>
+  </body>
+</html>
