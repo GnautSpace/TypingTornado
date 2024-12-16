@@ -25,4 +25,4 @@ Have fun, and aim for the top score! 🌟
 ## How to Run Locally  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/username/typing-tornado.git
+   git clone https://github.com/GnautSpace/TypingTornado.git
