@@ -26,3 +26,6 @@ Have fun, and aim for the top score! 🌟
 1. Clone the repository:  
    ```bash
    git clone https://github.com/GnautSpace/TypingTornado.git
+
+2. Open the game in your browser:
+   Open the file webroot/page.html directly in your preferred browser.
