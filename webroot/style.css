@@ -1,7 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background:rgb(255, 250, 227);
+  background-color: #fef6e4; 
+  background-image: 
+    radial-gradient(circle, #ffd6e0 10%, transparent 10%), 
+    radial-gradient(circle, #cdeac0 10%, transparent 10%), 
+    linear-gradient(45deg, #faedcb 25%, transparent 25%, transparent 75%, #faedcb 75%, #faedcb), 
+    linear-gradient(45deg, transparent 25%, #b9fbc0 25%, #b9fbc0 75%, transparent 75%); 
+  background-size: 40px 40px, 60px 60px, 100px 100px, 100px 100px;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  overflow: hidden;
   color: #333;
   display: flex;
   justify-content: center;
@@ -114,7 +121,7 @@ body {
 #user-input {
   font-size: 1.2rem;
   padding: 10px;
-  width: 100%;
+  width: 95%;
   border: 2px solid #ff9e9e;
   border-radius: 5px;
   outline: none;
@@ -167,6 +174,54 @@ body {
   100% {
     top: 100%;
     left: calc(50% + 50px);
+    opacity: 0;
+  }
+}
+
+.tornado {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 200px;
+  background: conic-gradient(transparent, rgba(255, 150, 150, 0.2), transparent);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite, moveUp 2s linear forwards;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -20%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 120%;
+    opacity: 0;
+  }
+}
+
+.swept-away {
+  animation: sweepAway 1.5s ease-out forwards;
+}
+
+@keyframes sweepAway {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, -100px) rotate(45deg);
     opacity: 0;
   }
 }
